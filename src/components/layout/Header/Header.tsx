@@ -3,10 +3,10 @@ import NavMenu from "./NavMenu";
 
 const Header = () => {
   return (
-    <header>
-      <div className="bg-transparent max-w-7xl z-50 mx-auto flex justify-between">
+    <header className="sticky top-0 pt-4 w-full justify-center z-50">
+      <div className="bg-transparent flex justify-between container-base">
         <div>MIDNITE</div>
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex">
           <NavMenu />
         </nav>
         <div className="hidden md:flex items-center">Contact Us</div>

@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header/Header";
+import Header from "@/components/layout/Header/Header";
+import { BackgroundImageProvider } from "@/context/BackgroundImageContext";
+import TopBackgroundLayer from "@/components/layout/TopBackgroundLayer";
+import "./globals.css";
+import { Inter } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -24,12 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        <main>{children}</main>
+    <html lang="en" className={inter.className}>
+      <body className="antialiased">
+        <BackgroundImageProvider>
+          <TopBackgroundLayer />
+          <Header />
+          <main>{children}</main>
+        </BackgroundImageProvider>
       </body>
     </html>
   );
