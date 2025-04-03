@@ -14,12 +14,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-
       <div className="h-[400px]">Sections</div>
-      {/* <div className="h-[400px]">Sections</div>
-      <div className="h-[400px]">Sections</div>
-      <div className="h-[400px]">Sections</div>
-      <div className="h-[400px]">Sections</div> */}
     </>
   );
 }
