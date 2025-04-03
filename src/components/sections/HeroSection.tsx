@@ -1,4 +1,5 @@
 import React from "react";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 const HeroSection = () => {
   return (
@@ -13,12 +14,10 @@ const HeroSection = () => {
           enterprises — we’re your unfair advantage.
         </p>
         <div className="flex gap-4">
-          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-            Start a Project
-          </button>
-          <button className="text-white px-6 py-3 rounded-full border border-white hover:bg-white/10 transition">
-            Book a Call
-          </button>
+          <InteractiveHoverButton className="text-black light">
+            Start a project
+          </InteractiveHoverButton>
+          <InteractiveHoverButton>Book a Call</InteractiveHoverButton>
         </div>
       </div>
     </section>
