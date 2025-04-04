@@ -1,29 +1,3 @@
-// import Link from "next/link";
-
-// const navItems = [
-//   { label: "About", href: "/about" },
-//   { label: "Services", href: "/services" },
-//   { label: "Our Work", href: "/our-work" },
-// ];
-
-// const NavMenu = () => {
-//   return (
-//     <>
-//       {navItems.map(({ label, href }) => (
-//         <Link
-//           key={label}
-//           href={href}
-//           className="text-white font-medium hover:underline px-4 py-2"
-//         >
-//           {label}
-//         </Link>
-//       ))}
-//     </>
-//   );
-// };
-
-// export default NavMenu;
-
 "use client";
 
 import * as React from "react";
@@ -53,7 +27,9 @@ export function NavMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Our Work</NavigationMenuTrigger>
+          <Link href="/our-work">
+            <NavigationMenuTrigger>Our Work</NavigationMenuTrigger>
+          </Link>
           <NavigationMenuContent className="bg-black">
             <div className="grid grid-cols-2 md:w-[500px] lg:w-[700px] min-h-[400px] gap-4">
               {featuredWork.map((preview) => (
@@ -77,34 +53,6 @@ export function NavMenu() {
                 </div>
               ))}
             </div>
-
-            {/* <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul> */}
           </NavigationMenuContent>
         </NavigationMenuItem>
         {/* Service Menu Section */}
@@ -115,7 +63,6 @@ export function NavMenu() {
               <ul className="flex flex-col gap-2">
                 {servicesMenuItems.map((item) => {
                   const Icon = item.icon;
-
                   return (
                     <Link
                       key={item.title}
