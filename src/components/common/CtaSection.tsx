@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 const CtaSection = () => {
   return (
@@ -26,9 +27,9 @@ const CtaSection = () => {
           What will <br /> you discover?
         </h1>
         <div className="flex justify-center gap-4">
-          <button className="bg-white text-black font-semibold py-2 px-4 rounded-full hover:bg-gray-200 transition">
+          <InteractiveHoverButton className="light text-black">
             Get In Touch
-          </button>
+          </InteractiveHoverButton>
         </div>
       </div>
     </section>
