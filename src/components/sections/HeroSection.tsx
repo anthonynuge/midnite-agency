@@ -1,7 +1,7 @@
 import React from "react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
-import Lottie from "lottie-react";
-import animationData from "@/animation/planet.json";
+// import Lottie from "lottie-react";
+// import animationData from "@/animation/planet.json";
 
 const HeroSection = () => {
   return (
@@ -23,11 +23,11 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="hidden w-1/2 md:flex justify-end ">
+      {/* <div className="hidden w-1/2 md:flex justify-end ">
         <div className="w-sm md:-translate-y-8">
           <Lottie animationData={animationData} className="" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
