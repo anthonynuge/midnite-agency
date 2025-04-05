@@ -1,5 +1,6 @@
 "use client";
 
+import CtaSection from "@/components/common/CtaSection";
 import FaqSection from "@/components/sections/FaqSection";
 import HeroSection from "@/components/sections/HeroSection";
 import { useBackgroundImage } from "@/context/BackgroundImageContext";
@@ -17,6 +18,7 @@ export default function Home() {
       <HeroSection />
       {/* <div className="h-[400px]">Sections</div> */}
       <FaqSection />
+      <CtaSection />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { BackgroundImageProvider } from "@/context/BackgroundImageContext";
 import TopBackgroundLayer from "@/components/layout/TopBackgroundLayer";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Footer from "@/components/layout/Footer/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
           <TopBackgroundLayer />
           <Header />
           <main>{children}</main>
+          <Footer />
         </BackgroundImageProvider>
       </body>
     </html>
