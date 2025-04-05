@@ -6,6 +6,7 @@ import TopBackgroundLayer from "@/components/layout/TopBackgroundLayer";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/layout/Footer/Footer";
+import BlobBackground from "@/components/ui/BlobBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,7 +28,8 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="antialiased">
         <BackgroundImageProvider>
-          <TopBackgroundLayer />
+          {/* <TopBackgroundLayer /> */}
+          <BlobBackground />
           <Header />
           <main>{children}</main>
           <Footer />
